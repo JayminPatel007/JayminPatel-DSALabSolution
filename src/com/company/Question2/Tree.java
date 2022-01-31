@@ -28,9 +28,8 @@ public class Tree<T> {
                     int temp = list.size();
                     if (temp > max) {
                         max = temp;
-                        list.add(current);
                         longestPath = (ArrayList<TreeNode<T>>) list.clone();
-                        list.remove(list.size() - 1);
+                        longestPath.add(current);
                     }
                     current = null;
                 }
